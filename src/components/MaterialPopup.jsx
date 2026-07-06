@@ -77,7 +77,6 @@ export default function MaterialPopup({ record, activeExport }) {
         <DetailField label="Safe to handle" value={record.safeToHandle} />
         <DetailField label="Collection status" value={record.collectionStatus} />
         <DetailField label="Priority" value={record.priority} />
-        <DetailField label="Team" value={record.teamName} />
         <DetailField label="Submitted" value={record.submissionTime} />
         <DetailField label="Notes" value={record.notes} />
         <DetailField label="Reuse idea" value={record.reuseIdea} />

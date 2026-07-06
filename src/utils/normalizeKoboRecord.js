@@ -167,7 +167,6 @@ export function normalizeKoboRecord(row, index, activeExport) {
       "date_time_of_observation",
       "start"
     ]),
-    teamName: firstValue(lookup, ["team_name", "team_student_name", "student_name", "team"]),
     lat: coords.lat,
     lon: coords.lon,
     materialCategory,

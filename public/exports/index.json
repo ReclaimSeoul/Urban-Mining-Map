@@ -1,5 +1,5 @@
 {
-  "defaultExportId": "upload-2026-07-05",
+  "defaultExportId": "upload-2026-07-06",
   "exports": [
     {
       "id": "upload-2026-07-06",
@@ -9,8 +9,8 @@
       "mediaBasePath": "/uploads/2026-07-06/media",
       "mediaLayouts": ["uuid", "flat"],
       "delimiter": ";",
-      "center": [],
-      "zoom": null
+      "center": [37.5666, 127.0214],
+      "zoom": 12
     }
   ]
 }
