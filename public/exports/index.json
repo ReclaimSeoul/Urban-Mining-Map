@@ -1,0 +1,16 @@
+{
+  "defaultExportId": "upload-2026-07-05",
+  "exports": [
+    {
+      "id": "upload-2026-07-06",
+      "label": "Upload 2026-07-06",
+      "description": "Canonical dated upload stored in public/uploads/2026-07-06.",
+      "csvPath": "/uploads/2026-07-06/data/materials.csv",
+      "mediaBasePath": "/uploads/2026-07-06/media",
+      "mediaLayouts": ["uuid", "flat"],
+      "delimiter": ";",
+      "center": [],
+      "zoom": null
+    }
+  ]
+}
