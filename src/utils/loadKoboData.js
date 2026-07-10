@@ -1,7 +1,19 @@
 import Papa from "papaparse";
 import { normalizeKoboRecord } from "./normalizeKoboRecord.js";
 
-const EXPORT_INDEX_PATH = "/exports/index.json";
+const PUBLIC_BASE_URL = import.meta.env.BASE_URL || "/";
+const EXPORT_INDEX_PATH = resolvePublicPath("exports/index.json");
+
+function resolvePublicPath(path) {
+  const value = String(path || "").trim();
+
+  if (!value || /^(?:https?:)?\/\//i.test(value) || value.startsWith("data:")) {
+    return value;
+  }
+
+  const base = PUBLIC_BASE_URL.endsWith("/") ? PUBLIC_BASE_URL : `${PUBLIC_BASE_URL}/`;
+  return new URL(value.replace(/^\/+/, ""), window.location.origin + base).pathname;
+}
 
 function normalizeExportIndex(index) {
   if (!index || !Array.isArray(index.exports) || !index.exports.length) {
@@ -19,8 +31,8 @@ function normalizeExportIndex(index) {
         id: entry.id,
         label: entry.label || entry.id,
         description: entry.description || "",
-        csvPath: entry.csvPath,
-        mediaBasePath: entry.mediaBasePath || "",
+        csvPath: resolvePublicPath(entry.csvPath),
+        mediaBasePath: resolvePublicPath(entry.mediaBasePath),
         mediaLayouts: Array.isArray(entry.mediaLayouts) && entry.mediaLayouts.length
           ? entry.mediaLayouts
           : ["uuid", "flat"],
@@ -111,4 +123,3 @@ export async function loadKoboData(selectedExportId) {
     activeExport
   };
 }
-
