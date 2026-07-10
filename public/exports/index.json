@@ -1,5 +1,5 @@
 {
-  "defaultExportId": "upload-2026-07-06",
+  "defaultExportId": "upload-2026-07-10",
   "exports": [
     {
       "id": "upload-2026-07-06",
@@ -7,6 +7,17 @@
       "description": "Canonical dated upload stored in public/uploads/2026-07-06.",
       "csvPath": "/uploads/2026-07-06/data/materials.csv",
       "mediaBasePath": "/uploads/2026-07-06/media",
+      "mediaLayouts": ["uuid", "flat"],
+      "delimiter": ";",
+      "center": [37.5666, 127.0214],
+      "zoom": 12
+    },
+    {
+      "id": "upload-2026-07-10",
+      "label": "Upload 2026-07-10",
+      "description": "Canonical dated upload stored in public/uploads/2026-07-10.",
+      "csvPath": "/uploads/2026-07-10/data/materials.csv",
+      "mediaBasePath": "/uploads/2026-07-10/media",
       "mediaLayouts": ["uuid", "flat"],
       "delimiter": ";",
       "center": [37.5666, 127.0214],
